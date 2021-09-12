@@ -97,6 +97,10 @@ a {
     margin-left: 2%;
 }
 
+i {
+    color: white;
+}
+
 i:hover {
     color: var(--softMagenta);
     cursor: pointer;
