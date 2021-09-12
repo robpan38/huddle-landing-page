@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 100ms linear;
+}
+
+:root {
+    /* colors */
+    --violet: hsl(257, 40%, 49%);
+    --softMagenta: hsl(300, 69%, 71%);
+
+    font-family: 'Open Sans', 'sans-serif';
+    color: white;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("images/bg-desktop.svg");
+    background-color: var(--violet);
+}
+
+header {
+    height: 20%;
+    width: calc(85% + 20px);
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+main {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+main .image {
+    height: 100%;
+    width: 55%;
+    background-image: url("images/illustration-mockups.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+main .text {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    height: 10%;
+    width: calc(85% + 20px);
+    margin: 0 auto;
+    text-align: right;
+}
+
+h1 {
+    font-family: 'Poppins', 'sans-serif';
+    margin-bottom: 3%;
+}
+
+.build {
+    margin-top: 3%;
+}
+
+.description {
+    opacity: 85%;
+    font-size: max(0.8rem, 0.8vw);
+    line-height: 1.4rem;
+    margin-bottom: 4%;
+}
+
+button {
+    font-family: 'Open Sans', 'sans-serif';
+    width: 40%;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 3%;
+    filter: drop-shadow(0px 0px 4px hsla(360, 0%, 0%, 0.43));
+    color: var(--violet);
+}
+
+button:hover {
+    background-color: var(--softMagenta);
+    color: white;
+    cursor: pointer;
+}
+
+a {
+    font-size: max(1.2rem, 1.2vw);
+    margin-left: 2%;
+}
+
+i:hover {
+    color: var(--softMagenta);
+    cursor: pointer;
+}
+
+a:visited {
+    color: white;
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        background-image: url("images/bg-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-height: 675px;
+    }
+    
+    main {
+        height: 80%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0;
+        row-gap: 20px;
+    }
+
+    header {
+        height: 10%;
+        width: 80%;
+    }
+
+    header img {
+        width: 132px;
+        height: 24.5pt;
+    }
+
+    main .image {
+        height: 40%;
+        width: 80%;
+        /* background-position: center; */
+    }
+
+    main .text {
+        height: 40%;
+        width: 80%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        margin-bottom: 1%;
+        font-size: max(1rem, 1vw);
+    }
+
+    footer {
+        text-align: center;
+        width: 100%;
+    }
+}
